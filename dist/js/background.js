@@ -27,7 +27,7 @@ class InteractiveParticles {
 
   resize() {
     this.canvas.width = window.innerWidth;
-    this.canvas.height = window.innerHeight;
+    this.canvas.height = document.body.scrollHeight;
   }
 
   createParticles() {
@@ -169,7 +169,7 @@ class InteractiveParticles {
 
     document.addEventListener('mousemove', (e) => {
       this.mouse.x = e.clientX;
-      this.mouse.y = e.clientY;
+      this.mouse.y = e.clientY + window.scrollY;
     });
 
     document.addEventListener('mouseleave', () => {
@@ -181,7 +181,7 @@ class InteractiveParticles {
       e.preventDefault();
       const t = e.touches[0];
       this.mouse.x = t.clientX;
-      this.mouse.y = t.clientY;
+      this.mouse.y = t.clientY + window.scrollY;
     }, { passive: false });
 
     document.addEventListener('touchend', () => {
