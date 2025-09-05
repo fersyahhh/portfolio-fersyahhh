@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <!-- Font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Opensans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <title>Portfolio Ferdi</title>
+  </head>
+  <body>
+    
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Header Start -->
+    <header class="fixed w-full z-[9999] md:px-10">
+      <div class="container">
+        <div class="relative flex items-center justify-between py-2">
+          <div class="px-4 lg:px-12 xl:px-4">
+            <a href="#home" class="font-montserrat text-primary text-2xl font-semibold">Portfolio</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="md:hidden">
+              <span class="hamburger-transition hamburger-line origin-top-left"></span>
+              <span class="hamburger-transition hamburger-line"></span>
+              <span class="hamburger-transition hamburger-line origin-bottom-left"></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="bg-primary nav-links absolute -top-20 right-0 mx-auto w-full py-4 text-lg text-white opacity-0 transition-all duration-700 ease-in-out"
+            >
+              <ul class="flex justify-center gap-2.5 md:justify-end md:pr-6 lg:pr-2 xl:pr-6">
+                <li>
+                  <a href="#home" class="nav-line mx-2 text-base md:text-lg lg:text-xl">Home</a>
+                </li>
+                <li>
+                  <a href="#about" class="nav-line mx-2 text-base md:text-lg lg:text-xl">About</a>
+                </li>
+                <li>
+                  <a href="#project" class="nav-line mx-2 text-base md:text-lg lg:text-xl">Project</a>
+                </li>
+                <li>
+                  <a href="#contact" class="nav-line mx-2 text-base md:text-lg lg:text-xl">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section id="hero" class="pt-28 pb-12 md:h-[730px] lg:h-lvh relative">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="flex flex-row-reverse flex-wrap justify-center">
+            <div class="px-8 md:w-1/2 lg:pl-32">
+              <div class="w-96 overflow-hidden rounded-full bg-slate-200 md:w-80 lg:w-[360px] xl:w-96">
+                <img src="dist/img/ferdi.png" alt="portfolio-img" class="w-full" />
+              </div>
+            </div>
+
+            <div class="md:w-1/2 md:pt-10 md:pl-10 lg:pl-44 xl:pl-56">
+              <div class="w-full pt-10">
+                <h2 class="flex items-center gap-2 text-lg font-medium lg:text-xl">
+                  <span class="bg-primary h-[2px] w-10 rounded-lg"></span>HELLO WORLD
+                </h2>
+                <h1 class="mt-2 text-4xl font-bold lg:text-5xl">I'm <span>Ferdi</span> Apriansyah</h1>
+                <p class="text-secondary mt-1 mb-5 md:mb-10 text-base lg:mt-3">
+                  I am an Informatics Engineering student at Pamulang University, South Tangerang.
+                </p>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#contact" class="hero-btn">Info Contact</a>
+                <a href="#" class="hero-btn">Download CV</a>
+              </div>
+
+              <div class="flex gap-4 md:absolute bottom-2 left-8">
+                <div class="mt-4 socials-media-circle">
+                  <i class="fab fa-instagram text-lg"></i>
+                </div>
+                <div class="mt-4 socials-media-circle">
+                  <i class="fab fa-linkedin text-lg"></i>
+                </div>
+                <div class="mt-4 socials-media-circle">
+                  <i class="fab fa-tiktok text-lg"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <section class="h-[2000px] bg-slate-400"></section>
+
+    <!-- My JavaScript -->
+    <script src="dist/js/hamburger.js"></script>
+    <script src="dist/js/background.js"></script>
+
+  </body>
+</html>
