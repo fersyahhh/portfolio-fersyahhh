@@ -10,10 +10,10 @@ class InteractiveParticles {
     this.mouse = { x: -1000, y: -1000 };
 
     // Config
-    this.repulsionRadius = 100;   // jarak dorong
-    this.repulsionForce = 0.8;    // kekuatan dorong
-    this.attractionRadius = 180;  // jarak tarik
-    this.attractionForce = 0.05;  // kekuatan tarik
+    this.repulsionRadius = 100; // jarak dorong
+    this.repulsionForce = 0.8; // kekuatan dorong
+    this.attractionRadius = 180; // jarak tarik
+    this.attractionForce = 0.05; // kekuatan tarik
 
     this.init();
     this.animate();
@@ -44,8 +44,8 @@ class InteractiveParticles {
         vx: (Math.random() - 0.5) * 0.3,
         vy: (Math.random() - 0.5) * 0.3,
         radius: Math.random() * 4 + 1,
-        opacity: Math.random() * 0.5 + 0.3,              // 0.3–0.8
-        color: `rgba(0,0,0,${Math.random() * 0.5 + 0.3})`,// hitam transparan
+        opacity: Math.random() * 0.5 + 0.3, // 0.3–0.8
+        color: `rgba(0,0,0,${Math.random() * 0.5 + 0.3})`, // hitam transparan
         pulseSpeed: Math.random() * 0.02 + 0.01,
       };
       p.originalX = p.x;
@@ -110,8 +110,8 @@ class InteractiveParticles {
       this.ctx.restore();
     });
 
-    this.drawConnections();       // garis antar partikel
-    this.drawMouseConnections();  // garis dari mouse ke partikel terdekat
+    this.drawConnections(); // garis antar partikel
+    this.drawMouseConnections(); // garis dari mouse ke partikel terdekat
   }
 
   drawConnections() {
@@ -177,12 +177,15 @@ class InteractiveParticles {
       this.mouse.y = -1000;
     });
 
-    document.addEventListener('touchmove', (e) => {
-      e.preventDefault();
-      const t = e.touches[0];
-      this.mouse.x = t.clientX;
-      this.mouse.y = t.clientY + window.scrollY;
-    }, { passive: false });
+    document.addEventListener(
+      'touchmove',
+      (e) => {
+        const t = e.touches[0];
+        this.mouse.x = t.clientX;
+        this.mouse.y = t.clientY + window.scrollY;
+      },
+      { passive: false }
+    );
 
     document.addEventListener('touchend', () => {
       this.mouse.x = -1000;
