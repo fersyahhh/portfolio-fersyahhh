@@ -10,10 +10,10 @@ class InteractiveParticles {
     this.mouse = { x: -1000, y: -1000 };
 
     // Config
-    this.repulsionRadius = 100; // jarak dorong
-    this.repulsionForce = 0.8; // kekuatan dorong
-    this.attractionRadius = 180; // jarak tarik
-    this.attractionForce = 0.05; // kekuatan tarik
+    this.repulsionRadius = 100;   // jarak dorong
+    this.repulsionForce = 0.8;    // kekuatan dorong
+    this.attractionRadius = 180;  // jarak tarik
+    this.attractionForce = 0.05;  // kekuatan tarik
 
     this.init();
     this.animate();
@@ -32,15 +32,13 @@ class InteractiveParticles {
 
   createParticles() {
     let numberOfParticles = Math.floor((this.canvas.width * this.canvas.height) / 12000);
-    numberOfParticles = Math.min(numberOfParticles, 150); // batas maksimal
+    numberOfParticles = Math.min(numberOfParticles, 200); // batas maksimal
 
     this.particles.length = 0;
     for (let i = 0; i < numberOfParticles; i++) {
       const p = {
         x: Math.random() * this.canvas.width,
         y: Math.random() * this.canvas.height,
-        originalX: 0,
-        originalY: 0,
         vx: (Math.random() - 0.5) * 0.3,
         vy: (Math.random() - 0.5) * 0.3,
         radius: Math.random() * 4 + 1,
@@ -48,8 +46,6 @@ class InteractiveParticles {
         color: `rgba(0,0,0,${Math.random() * 0.5 + 0.3})`, // hitam transparan
         pulseSpeed: Math.random() * 0.02 + 0.01,
       };
-      p.originalX = p.x;
-      p.originalY = p.y;
       this.particles.push(p);
     }
   }
@@ -76,16 +72,19 @@ class InteractiveParticles {
         p.vy += Math.sin(angle) * force * this.attractionForce;
       }
 
-      // Kembali perlahan ke posisi awal
-      const returnForce = 0.02;
-      p.vx += (p.originalX - p.x) * returnForce;
-      p.vy += (p.originalY - p.y) * returnForce;
+      // Drift random (biar melayang terus)
+      p.vx += (Math.random() - 0.5) * 0.01;
+      p.vy += (Math.random() - 0.5) * 0.01;
 
       // Damping & update posisi
       p.vx *= 0.95;
       p.vy *= 0.95;
       p.x += p.vx;
       p.y += p.vy;
+
+      // Bounce tepi layar
+      if (p.x < 0 || p.x > this.canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > this.canvas.height) p.vy *= -1;
 
       // Pulse opacity
       p.opacity = 0.3 + (0.4 * (1 + Math.sin(Date.now() * p.pulseSpeed))) / 2;
@@ -110,8 +109,8 @@ class InteractiveParticles {
       this.ctx.restore();
     });
 
-    this.drawConnections(); // garis antar partikel
-    this.drawMouseConnections(); // garis dari mouse ke partikel terdekat
+    this.drawConnections();
+    this.drawMouseConnections();
   }
 
   drawConnections() {

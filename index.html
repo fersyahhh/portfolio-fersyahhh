@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,19 +21,26 @@
       rel="stylesheet"
     />
 
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <title>Portfolio Ferdi</title>
   </head>
   <body>
+    <!-- Background -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- Header Start -->
     <header class="fixed z-[9999] w-full md:px-10">
       <div class="container">
         <div class="relative flex items-center justify-between py-2">
-          <div id="title-navbar" class="px-4 opacity-100 transition-all duration-300 ease-in-out lg:px-12 xl:px-4">
+          <div
+            id="title-navbar"
+            class="scale-100 px-4 opacity-100 transition-all duration-500 ease-in-out lg:px-12 xl:px-4"
+          >
             <a href="#home" class="font-montserrat text-primary text-2xl font-semibold">Portfolio</a>
           </div>
           <div class="flex items-center px-4">
@@ -41,7 +48,7 @@
               id="hamburger"
               name="hamburger"
               type="button"
-              class="relative z-[9999] transition-all duration-300 ease-in-out md:hidden"
+              class="relative z-[9999] transition-all duration-300 ease-in-out sm:hidden"
             >
               <span class="hamburger-transition hamburger-line origin-top-left"></span>
               <span class="hamburger-transition hamburger-line"></span>
@@ -51,18 +58,18 @@
               id="nav-menu"
               class="bg-primary nav-links absolute -top-20 right-0 z-[999] mx-auto w-full py-4 text-lg text-white opacity-0 transition-all duration-700 ease-in-out"
             >
-              <ul class="flex items-center justify-start gap-5 md:gap-8 pl-4 md:justify-end md:pr-6 lg:pr-2 xl:pr-6">
+              <ul class="flex items-center justify-start gap-5 pl-4 sm:justify-end sm:gap-8 sm:pr-6 lg:pr-2 xl:pr-6">
                 <li>
-                  <a href="#home" class="nav-line text-base md:text-lg lg:text-xl">Home</a>
+                  <a href="#home" class="nav-line text-base sm:text-lg lg:text-xl">Home</a>
                 </li>
                 <li>
-                  <a href="#about" class="nav-line text-base md:text-lg lg:text-xl">About</a>
+                  <a href="#about" class="nav-line text-base sm:text-lg lg:text-xl">About</a>
                 </li>
                 <li>
-                  <a href="#project" class="nav-line text-base md:text-lg lg:text-xl">Project</a>
+                  <a href="#project" class="nav-line text-base sm:text-lg lg:text-xl">Project</a>
                 </li>
                 <li>
-                  <a href="#contact" class="nav-line text-base md:text-lg lg:text-xl">Contact</a>
+                  <a href="#contact" class="nav-line text-base sm:text-lg lg:text-xl">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -73,9 +80,12 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="hero" class="relative pt-28 pb-12 md:h-[730px] lg:h-lvh border-b border-slate-400 shadow-lg shadow-black/20">
+    <section
+      id="home"
+      class="relative border-b border-slate-400 pt-28 pb-12 shadow-lg shadow-black/20 md:h-[730px] lg:h-lvh"
+    >
       <div class="container">
-        <div class="w-full px-4">
+        <div class="mx-auto w-full px-4">
           <div class="flex flex-row-reverse flex-wrap justify-center">
             <div class="px-8 md:w-1/2 lg:pl-32">
               <div
@@ -90,15 +100,24 @@
                 <h2 class="flex items-center gap-2 text-lg font-medium lg:text-xl">
                   <span class="bg-primary h-[2px] w-10 rounded-lg"></span>HELLO WORLD
                 </h2>
-                <h1 class="mt-2 text-4xl font-bold lg:text-5xl">I'm <span>Ferdi</span> Apriansyah</h1>
+                <div class="mt-2 flex items-center text-4xl font-bold lg:text-5xl">
+                  <h1 id="typed-text" class="inline"></h1>
+                  <span
+                    id="cursor"
+                    class="inline-block h-[1em] w-[1px] animate-[blink_1s_infinite] align-top leading-none opacity-100"
+                    >|</span
+                  >
+                </div>
                 <p class="text-secondary mt-1 mb-5 text-base md:mb-10 lg:mt-3">
                   I am an Informatics Engineering student at Pamulang University, South Tangerang.
                 </p>
               </div>
 
-              <div class="flex gap-4">
+              <div class="mb-4 flex flex-wrap gap-4">
                 <a href="#contact" class="hero-btn">Info Contact</a>
-                <a href="#" class="hero-btn">Download CV</a>
+                <a href="assets/CV_FerdiApriansyahAbdullah.pdf" download="Ferdi-Apriansyah-CV.pdf" class="hero-btn"
+                  >Download CV</a
+                >
               </div>
 
               <div class="bottom-2 left-8 flex gap-4 md:absolute">
@@ -119,10 +138,88 @@
     </section>
     <!-- Hero Section End -->
 
-    <section class="h-[2000px]"></section>
+    <!-- About Section Start -->
+    <section id="about" class="pt-36 pb-16">
+      <div class="container">
+        <div class="mx-auto w-full px-6 lg:w-5/6">
+          <div class="mx-auto mb-16 w-full text-center md:max-w-xl">
+            <h1
+              class="from-primary border-primary mx-auto w-1/2 rounded-full border-b-4 bg-gradient-to-r via-slate-700 to-slate-400 bg-clip-text pb-3 text-center text-3xl font-bold text-transparent md:text-4xl"
+            >
+              About Me
+            </h1>
+          </div>
+          <div class="grid w-full grid-cols-1 justify-between gap-6 md:grid-cols-2">
+            <div
+              class="hover:border-primary mb-10 h-full w-full rounded-lg border border-transparent bg-slate-200 p-8 shadow-md shadow-black/20 hover:border"
+            >
+              <div class="bg-primary flex h-12 w-12 items-center justify-center rounded-full">
+                <i data-feather="book" class="text-white"></i>
+              </div>
+              <h2 class="mt-3 text-xl font-semibold underline">My Story</h2>
+              <p class="text-secondary mt-5 text-base">
+                At 18, I'm already passionate about technology and software development. I believe that every line of
+                code has the potential to solve real-world problems and create meaningful digital experiences. Currently
+                pursuing Informatics Engineering at Universitas Pamulang, I'm building a strong foundation in
+                programming while exploring emerging technologies.
+              </p>
+            </div>
+            <div
+              class="hover:border-primary h-full w-full rounded-lg border border-transparent bg-slate-200 p-8 shadow-md shadow-black/20 hover:border"
+            >
+              <div class="bg-primary flex h-12 w-12 items-center justify-center rounded-full">
+                <i data-feather="code" class="text-white"></i>
+              </div>
+              <h2 class="mt-3 text-xl font-semibold underline">Technical Skills</h2>
+              <p class="text-secondary mt-5 text-base">
+                I'm continuously learning and expanding my technical expertise across various programming languages,
+                frameworks, development tools and other skills:
+              </p>
+              <div class="mt-4 grid grid-cols-1 justify-center gap-4 md:grid-cols-2">
+                <div class="box-about">HTML/CSS</div>
+                <div class="box-about">JavaScript</div>
+                <div class="box-about">Tailwind CSS</div>
+                <div class="box-about">Git</div>
+                <div class="box-about">Github</div>
+                <div class="box-about">Responsive</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hover:border-primary mt-6 mb-10 h-full w-full rounded-lg border border-transparent bg-slate-200 p-8 shadow-md shadow-black/20 hover:border"
+          >
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+              <div class="box-about">
+                <h1 class="text-4xl md:text-5xl">8+</h1>
+                <p class="mt-4 text-sm md:text-base">Months in IT</p>
+              </div>
+              <div class="box-about">
+                <h1 class="text-4xl md:text-5xl">4+</h1>
+                <p class="mt-4 text-sm md:text-base">Completed Projects</p>
+              </div>
+              <div class="box-about">
+                <h1 class="text-4xl md:text-5xl">∞</h1>
+                <p class="mt-4 text-sm md:text-base">Learning Enthusiasm</p>
+              </div>
+              <div class="box-about">
+                <h1 class="text-4xl md:text-5xl">10+</h1>
+                <p class="mt-4 text-sm md:text-base">Skills Acquired</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Feather Replace -->
+    <script>
+      feather.replace();
+    </script>
 
     <!-- My JavaScript -->
     <script src="dist/js/navbar.js"></script>
     <script src="dist/js/background.js"></script>
+    <script src="dist/js/animation.js"></script>
   </body>
 </html>
