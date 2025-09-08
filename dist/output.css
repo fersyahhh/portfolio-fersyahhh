@@ -6438,6 +6438,9 @@
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
+  .mr-0 {
+    margin-right: calc(var(--spacing) * 0);
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -6465,9 +6468,6 @@
   .table {
     display: table;
   }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
@@ -6491,9 +6491,6 @@
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
-  }
-  .w-\[1\] {
-    width: 1;
   }
   .w-\[1px\] {
     width: 1px;

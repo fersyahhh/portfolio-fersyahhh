@@ -1,5 +1,6 @@
+// Typed Text
 document.addEventListener('DOMContentLoaded', function () {
-  const texts = ["I'm Ferdi Apriansyah", 'Web Developer', 'Informatics Engineering Student'];
+  const texts = ["I'm Ferdi Apriansyah", 'Front End Developer'];
   const element = document.querySelector('#typed-text');
   let textIndex = 0;
   let charIndex = 0;
@@ -8,15 +9,20 @@ document.addEventListener('DOMContentLoaded', function () {
   function typeEffect() {
     const currentText = texts[textIndex];
 
-    // render teks sesuai progress
+    // Rendering texts
     element.textContent = currentText.substring(0, charIndex);
 
-    // atur kecepatan
-    let speed = isDeleting ? 80 : 120;
+    // Set the speed when letters are typed/remove
+    let speed;
+    if (isDeleting) {
+      speed = 80;
+    } else {
+      speed = 120;
+    }
 
     if (!isDeleting) {
       charIndex++;
-      // kalau sudah full → delay lalu mulai hapus
+      // Delete when charIndex is full
       if (charIndex > currentText.length) {
         setTimeout(() => {
           isDeleting = true;
@@ -24,9 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1500);
         return;
       }
-    } else {
+    } 
+
+    if (isDeleting) {
       charIndex--;
-      // kalau sudah kosong → ganti teks
+      // If charIndex is empty, replace texts
       if (charIndex < 0) {
         isDeleting = false;
         textIndex = (textIndex + 1) % texts.length;
@@ -36,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Hide Cursor
+    const cursor = document.querySelector('#cursor');
     if (charIndex === 0) {
       cursor.style.display = 'none';
     } else {
