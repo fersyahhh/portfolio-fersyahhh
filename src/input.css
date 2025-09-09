@@ -28,7 +28,7 @@ html {
 }
 
 .container {
-  @apply m-auto;
+  @apply mx-auto;
 }
 
 /* Background */
@@ -104,10 +104,17 @@ html {
   @apply bg-primary mt-4 flex h-9 w-9 items-center justify-center rounded-full text-white transition-all duration-300 ease-in-out hover:opacity-80;
 }
 
-/* HERO (Blink Animation) */
+/* HERO (Typed Animation) */
 @keyframes blink {
-  0%, 40%, 100% { opacity: 1; }
-  50%, 90% { opacity: 0; }
+  0%,
+  40%,
+  100% {
+    opacity: 1;
+  }
+  50%,
+  90% {
+    opacity: 0;
+  }
 }
 
 #cursor {
@@ -116,5 +123,28 @@ html {
 
 /* ABOUT (Box About) */
 .box-about {
-  @apply hover:bg-primary w-full rounded-lg bg-slate-300 py-4 text-center font-medium transition-all duration-300 ease-in-out hover:-translate-y-2 hover:text-white hover:shadow-md;
+  @apply hover:bg-primary w-full rounded-lg bg-slate-300 py-4 text-center font-medium transition-all duration-300 ease-in-out hover:-translate-y-2 hover:text-white hover:shadow-md text-primary;
+}
+
+/* ABOUT (About Card) */
+.card-about-1 {
+  @apply hover:border-primary mb-10 h-full w-full rounded-lg border border-transparent bg-slate-200 p-8 shadow-md shadow-black/20 hover:border;
+}
+
+.card-about-2 {
+  @apply hover:border-primary mt-6 mb-10 h-full w-full rounded-lg border border-transparent bg-slate-200 p-8 shadow-md shadow-black/20 hover:border
+}
+
+/* PROJECT (Project Card) */
+.card-project-1 {
+  @apply mb-10 h-full w-full rounded-4xl border border-slate-400 bg-slate-200 p-8 shadow-md shadow-black/20 transition-all duration-500 ease-in-out hover:bg-slate-600 xl:rounded-tl-4xl xl:rounded-tr-none xl:rounded-br-none xl:rounded-bl-4xl;
+}
+
+.card-project-2 {
+  @apply mb-10 h-full w-full rounded-4xl border border-slate-400 bg-slate-200 p-8 shadow-md shadow-black/20 transition-all duration-500 ease-in-out hover:bg-slate-600 xl:rounded-tl-none xl:rounded-tr-4xl xl:rounded-br-4xl xl:rounded-bl-none;
+}
+
+/* PROJECT (Circle Project) */
+#circle-project {
+  background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
 }

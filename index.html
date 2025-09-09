@@ -58,7 +58,9 @@
               id="nav-menu"
               class="bg-primary nav-links absolute -top-20 right-0 z-[999] mx-auto w-full py-4 text-lg text-white opacity-0 transition-all duration-700 ease-in-out"
             >
-              <ul class="flex items-center justify-start gap-5 pl-4 sm:justify-end sm:gap-8 sm:pr-6 lg:pr-2 xl:pr-6">
+              <ul
+                class="font-open-sans flex items-center justify-start gap-5 pl-4 sm:justify-end sm:gap-8 sm:pr-6 lg:pr-2 xl:pr-6"
+              >
                 <li>
                   <a href="#home" class="nav-line text-base sm:text-lg lg:text-xl">Home</a>
                 </li>
@@ -97,25 +99,26 @@
 
             <div class="md:w-1/2 md:pt-10 md:pl-10 lg:pl-44 xl:pl-56">
               <div class="w-full pt-10">
-                <h2 class="flex items-center gap-2 text-lg font-medium lg:text-xl">
+                <h2 class="font-open-sans flex items-center gap-2 text-lg font-medium lg:text-xl">
                   <span class="bg-primary h-[2px] w-10 rounded-lg"></span>HELLO WORLD
                 </h2>
-                <h1 class="mt-2 inline text-4xl font-bold lg:text-5xl">
-                  <span id="typed-text"></span><span id="cursor" class="animate-[blink_1s_infinite] opacity-100">|</span>
+                <h1 class="font-montserrat mt-2 inline text-4xl font-bold lg:text-5xl">
+                  <span id="typed-text"></span
+                  ><span id="cursor" class="animate-[blink_1s_infinite] opacity-100">|</span>
                 </h1>
-                <p class="text-secondary mt-1 mb-5 text-base md:mb-10 lg:mt-3">
+                <p class="text-secondary font-open-sans mt-1 mb-5 text-base md:mb-10 lg:mt-3">
                   I am an Informatics Engineering student at Pamulang University, South Tangerang.
                 </p>
               </div>
 
-              <div class="mb-4 flex flex-wrap gap-4">
+              <div class="font-open-sans mb-4 flex flex-wrap gap-4">
                 <a href="#contact" class="hero-btn">Info Contact</a>
                 <a href="assets/CV_FerdiApriansyahAbdullah.pdf" download="Ferdi-Apriansyah-CV.pdf" class="hero-btn"
                   >Download CV</a
                 >
               </div>
 
-              <div class="bottom-2 left-8 flex gap-4 md:absolute">
+              <div class="bottom-2 left-8 flex items-center gap-4 md:absolute">
                 <div class="socials-media-circle mt-4">
                   <i class="fab fa-instagram text-lg"></i>
                 </div>
@@ -139,20 +142,20 @@
         <div class="mx-auto w-full px-6 lg:w-5/6">
           <div class="mx-auto mb-16 w-full text-center md:max-w-xl">
             <h1
-              class="from-primary border-primary mx-auto w-1/2 rounded-full border-b-4 bg-gradient-to-r via-slate-700 to-slate-400 bg-clip-text pb-3 text-center text-3xl font-bold text-transparent md:text-4xl"
+              class="from-primary border-primary font-montserrat mx-auto w-1/2 rounded-full border-b-4 bg-gradient-to-r via-slate-700 to-slate-400 bg-clip-text pb-3 text-center text-3xl font-bold text-transparent md:text-4xl"
             >
               About Me
             </h1>
           </div>
           <div class="grid w-full grid-cols-1 justify-between gap-6 md:grid-cols-2">
             <div
-              class="hover:border-primary mb-10 h-full w-full rounded-lg border border-transparent bg-slate-200 p-8 shadow-md shadow-black/20 hover:border"
+              class="card-about-1"
             >
               <div class="bg-primary flex h-12 w-12 items-center justify-center rounded-full">
                 <i data-feather="book" class="text-white"></i>
               </div>
-              <h2 class="mt-3 text-xl font-semibold underline">My Story</h2>
-              <p class="text-secondary mt-5 text-base">
+              <h2 class="font-open-sans mt-3 text-xl font-semibold underline text-primary">My Story</h2>
+              <p class="text-secondary font-open-sans mt-5 text-base">
                 At 18, I'm already passionate about technology and software development. I believe that every line of
                 code has the potential to solve real-world problems and create meaningful digital experiences. Currently
                 pursuing Informatics Engineering at Universitas Pamulang, I'm building a strong foundation in
@@ -160,17 +163,17 @@
               </p>
             </div>
             <div
-              class="hover:border-primary h-full w-full rounded-lg border border-transparent bg-slate-200 p-8 shadow-md shadow-black/20 hover:border"
+              class="card-about-1"
             >
               <div class="bg-primary flex h-12 w-12 items-center justify-center rounded-full">
                 <i data-feather="code" class="text-white"></i>
               </div>
-              <h2 class="mt-3 text-xl font-semibold underline">Technical Skills</h2>
-              <p class="text-secondary mt-5 text-base">
+              <h2 class="font-open-sans mt-3 text-xl font-semibold underline text-primary">Technical Skills</h2>
+              <p class="text-secondary font-open-sans mt-5 text-base">
                 I'm continuously learning and expanding my technical expertise across various programming languages,
                 frameworks, development tools and other skills:
               </p>
-              <div class="mt-4 grid grid-cols-1 justify-center gap-4 md:grid-cols-2">
+              <div class="font-open-sans mt-4 grid grid-cols-1 justify-center gap-4 md:grid-cols-2">
                 <div class="box-about">HTML/CSS</div>
                 <div class="box-about">JavaScript</div>
                 <div class="box-about">Tailwind CSS</div>
@@ -181,9 +184,9 @@
             </div>
           </div>
           <div
-            class="hover:border-primary mt-6 mb-10 h-full w-full rounded-lg border border-transparent bg-slate-200 p-8 shadow-md shadow-black/20 hover:border"
+            class="card-about-2"
           >
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div class="font-open-sans grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               <div class="box-about">
                 <h1 class="text-4xl md:text-5xl">8+</h1>
                 <p class="mt-4 text-sm md:text-base">Months in IT</p>
@@ -206,6 +209,70 @@
       </div>
     </section>
     <!-- About Section End -->
+
+    <!-- Project Section Start -->
+    <section id="project" class="pt-24 pb-16">
+      <div class="container px-4">
+        <div class="mx-auto w-full px-4 lg:w-5/6">
+          <div class="mx-auto mb-16 w-full text-center md:max-w-xl">
+            <h1
+              class="from-primary border-primary font-montserrat mx-auto w-[65%] rounded-full border-b-4 bg-gradient-to-r via-slate-700 to-slate-400 bg-clip-text pb-3 text-center text-3xl font-bold text-transparent md:text-4xl"
+            >
+              My Projects
+            </h1>
+          </div>
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-5 relative">
+            <div
+              class="card-project-1 group"
+            >
+              <div class="w-full overflow-hidden rounded-lg shadow-lg shadow-black/20 h-48 xl:h-auto group hover:scale-95 transition-all duration-500 ease-in-out md:h-64">
+                <img src="dist/img/projects/project 1.png" alt="" class="w-full h-full object-cover object-center hover:scale-110 transition-all duration-500 ease-in-out" />
+              </div>
+              <h3 class="font-open-sans mt-4 text-xl md:text-2xl font-semibold text-primary group-hover:text-white">Clean Sign In UI</h3>
+              <p class="font-open-sans text-secondary group-hover:text-white mt-2 text-sm md:text-base">
+                A minimalist and professional login page interface. Designed with an elegant blue color scheme, simple
+                form structure, and clear navigation for login or registration, providing a smooth user experience.
+              </p>
+            </div>
+            <div
+              class="card-project-2 group"
+            >
+              <div class="w-full overflow-hidden rounded-lg shadow-lg shadow-black/20 h-48 xl:h-auto group hover:scale-95 transition-all duration-500 ease-in-out md:h-64">
+                <img src="dist/img/projects/project 2.png" alt="" class="w-full h-full object-cover object-center hover:scale-110 transition-all duration-500 ease-in-out" />
+              </div>
+              <h3 class="font-open-sans mt-4 text-xl md:text-2xl font-semibold text-primary group-hover:text-white">Minimalist Sign In & Sign Up</h3>
+              <p class="font-open-sans text-secondary mt-2 text-sm md:text-base group-hover:text-white">
+                A modern login & registration UI with a fresh gradient style. Simple yet stylish design that emphasizes clarity in forms and includes social media sign-in options. Perfect for modern applications aiming for a professional and user-friendly look.
+              </p>
+            </div>
+            <div
+              class="card-project-1 group"
+            >
+              <div class="w-full overflow-hidden rounded-lg shadow-lg shadow-black/20 h-48 xl:h-auto group hover:scale-95 transition-all duration-500 ease-in-out md:h-64">
+                <img src="dist/img/projects/project 3.png" alt="" class="w-full h-full object-cover object-center hover:scale-110 transition-all duration-500 ease-in-out" />
+              </div>
+              <h3 class="font-open-sans mt-4 text-xl md:text-2xl font-semibold text-primary group-hover:text-white">Culinary Landing Page</h3>
+              <p class="font-open-sans text-secondary mt-2 text-sm md:text-base group-hover:text-white">
+                An elegant culinary-themed landing page built to showcase food or restaurant businesses. Focused on engaging visuals and well-structured content placement, making it effective for branding and capturing customer interest.
+              </p>
+            </div>
+            <div
+              class="card-project-2 group"
+            >
+              <div class="w-full overflow-hidden rounded-lg shadow-lg shadow-black/20 h-48 xl:h-auto group hover:scale-95 transition-all duration-500 ease-in-out md:h-64">
+                <img src="dist/img/projects/project 4.png" alt="" class="w-full h-full object-cover object-center hover:scale-110 transition-all duration-500 ease-in-out" />
+              </div>
+              <h3 class="font-open-sans mt-4 text-xl md:text-2xl font-semibold text-primary group-hover:text-white">Web Development Landing Page</h3>
+              <p class="font-open-sans text-secondary mt-2 text-sm md:text-base group-hover:text-white">
+                A modern landing page designed for web development services. Featuring a clean layout, clear typography, and responsive design to ensure users easily understand the offered services. Perfect for introducing digital solutions and attracting potential clients.
+              </p>
+            </div>
+            <div id="circle-project" class="rounded-full h-20 w-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-lg border border-slate-400 invisible xl:visible hover:scale-110 transition-all duration-500 ease-in-out hover:saturate-150"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Project Section End -->
 
     <!-- Feather Replace -->
     <script>
