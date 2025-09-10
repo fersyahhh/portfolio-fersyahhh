@@ -74,7 +74,7 @@ html {
 
 /* NAVBAR (Nav Links) */
 .nav-line {
-  @apply relative pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:origin-left after:bg-white after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full hover:after:scale-x-100 after:sm:bg-slate-800;
+  @apply relative pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:origin-left after:bg-white after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full after:sm:bg-slate-800;
 }
 
 /* NAVBAR (Nav Menu) */
@@ -123,7 +123,7 @@ html {
 
 /* ABOUT (Box About) */
 .box-about {
-  @apply hover:bg-primary w-full rounded-lg bg-slate-300 py-4 text-center font-medium transition-all duration-300 ease-in-out hover:-translate-y-2 hover:text-white hover:shadow-md text-primary;
+  @apply hover:bg-primary text-primary w-full rounded-lg bg-slate-300 py-4 text-center font-medium transition-all duration-300 ease-in-out hover:-translate-y-2 hover:text-white hover:shadow-md;
 }
 
 /* ABOUT (About Card) */
@@ -132,7 +132,7 @@ html {
 }
 
 .card-about-2 {
-  @apply hover:border-primary mt-6 mb-10 h-full w-full rounded-lg border border-transparent bg-slate-200 p-8 shadow-md shadow-black/20 hover:border
+  @apply hover:border-primary mt-6 mb-10 h-full w-full rounded-lg border border-transparent bg-slate-200 p-8 shadow-md shadow-black/20 hover:border;
 }
 
 /* PROJECT (Project Card) */
@@ -147,4 +147,34 @@ html {
 /* PROJECT (Circle Project) */
 #circle-project {
   background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
+}
+
+/* CONTACT (Box Contact) */
+.box-contact {
+  @apply hover:bg-primary w-full rounded-xl bg-slate-200 p-4 shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105;
+}
+
+/* Animation Section */
+.reavel-left {
+  @apply opacity-0 -translate-x-24 transform transition-all duration-[1500ms] ease-in-out;
+}
+
+.reavel-bottom {
+  @apply opacity-0 transform translate-y-28 transition-all duration-[1500ms] ease-in-out;
+}
+
+.reavel-top {
+  @apply opacity-0 transform -translate-y-28 transition-all duration-[1500ms] ease-in-out;
+}
+
+.reavel-bt-show {
+  @apply opacity-100 translate-y-0;
+}
+
+.reavel-tp-show {
+  @apply opacity-100 translate-y-0;
+}
+
+.reavel-l-show {
+  @apply opacity-100 translate-x-0;
 }

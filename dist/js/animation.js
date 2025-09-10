@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1500);
         return;
       }
-    } 
+    }
 
     if (isDeleting) {
       charIndex--;
@@ -56,3 +56,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   typeEffect();
 });
+
+// Animation Section
+const observers = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('reavel-bottom')) {
+          entry.target.classList.add('reavel-bt-show');
+        }
+        if (entry.target.classList.contains('reavel-left')) {
+          entry.target.classList.add('reavel-l-show');
+        }
+        if (entry.target.classList.contains('reavel-top')) {
+          entry.target.classList.add('reavel-tp-show');
+        }
+        observer.unobserve(entry.target);
+      }
+    })
+  },
+  { threshold: 0.2 }
+)
+
+document.querySelectorAll('.reavel-bottom, .reavel-left, .reavel-top').forEach(el => observers.observe(el));
