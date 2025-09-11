@@ -10,10 +10,10 @@ class InteractiveParticles {
     this.mouse = { x: -1000, y: -1000 };
 
     // Config
-    this.repulsionRadius = 100;   // jarak dorong
-    this.repulsionForce = 0.8;    // kekuatan dorong
-    this.attractionRadius = 180;  // jarak tarik
-    this.attractionForce = 0.05;  // kekuatan tarik
+    this.repulsionRadius = 100; // jarak dorong
+    this.repulsionForce = 0.8; // kekuatan dorong
+    this.attractionRadius = 180; // jarak tarik
+    this.attractionForce = 0.05; // kekuatan tarik
 
     this.init();
     this.animate();

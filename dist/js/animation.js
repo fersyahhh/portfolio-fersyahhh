@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Animation Section
 const observers = new IntersectionObserver(
   (entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         if (entry.target.classList.contains('reavel-bottom')) {
           entry.target.classList.add('reavel-bt-show');
@@ -73,9 +73,9 @@ const observers = new IntersectionObserver(
         }
         observer.unobserve(entry.target);
       }
-    })
+    });
   },
   { threshold: 0.2 }
-)
+);
 
-document.querySelectorAll('.reavel-bottom, .reavel-left, .reavel-top').forEach(el => observers.observe(el));
+document.querySelectorAll('.reavel-bottom, .reavel-left, .reavel-top').forEach((el) => observers.observe(el));
